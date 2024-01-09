@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dvargasExamen.Vistas.Registro"
+             Title="Registro">
+    <VerticalStackLayout>
+        <Label x:Name="lblUsuario"
+       TextColor="Black"
+       HorizontalTextAlignment="End" />
+        <Label 
+    Text="EXAMEN APP"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" 
+    FontSize="22"
+    TextColor="blue"/>
+
+        <Grid Padding="40">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Fecha"
+               FontSize="18"
+               Grid.Row="0"
+               Grid.Column="0"/>
+            <DatePicker x:Name="Fechas" Date="01/01/2024"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+            <Label Text="PAIS"
+               FontSize="18"
+               Grid.Row="1"
+               Grid.Column="0"/>
+            
+            <Picker x:Name="paises" Title="PAIS" Grid.Row="1" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>
+                        Ecuador
+                    </x:String>
+                    <x:String>
+                        Argentina
+                    </x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="CIUDAD"
+                   FontSize="18"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+
+            <Picker x:Name="ciudad" Title="CIUDAD" Grid.Row="2" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>
+                        Quito
+                    </x:String>
+                    <x:String>
+                        Guayaquil
+                    </x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Monto Inicial"
+               FontSize="18"
+               Grid.Row="3"
+               Grid.Column="0"/>
+            <Entry x:Name="txtMonto"
+                     Placeholder="Monto"
+                     Keyboard="Numeric"
+                     MaxLength="4"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   TextChanged="txtMonto_TextChanged"/>
+            <Label Text="Pago Inicial"
+               FontSize="18"
+               Grid.Row="4"
+               Grid.Column="0"/>
+
+            <Entry x:Name="txtPagoInicial"
+                 Placeholder="PagoInicial"
+                 Keyboard="Numeric"
+                 MaxLength="4"
+               Grid.Row="4"
+               Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

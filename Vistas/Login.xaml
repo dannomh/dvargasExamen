@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dvargasExamen.Vistas.Login"
+             Title="Login">
+    <VerticalStackLayout Spacing="20" Padding="25">
+        <Label 
+            Text="EXAMEN APP"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            TextColor="Red"/>
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+               WidthRequest="300"/>
+        <Grid Padding="40">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO"
+           FontSize="18"
+           Grid.Row="0"
+           Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+           Placeholder="Ingrese Usuario"
+           Grid.Row="0"
+           Grid.Column="1"
+           />
+            <Label Text="CONTRASEÑA"
+            FontSize="18"
+            Grid.Row="1"
+            Grid.Column="0"/>
+            <Entry x:Name="txtContraseña"
+           Placeholder="Ingrese Contraseña"
+           IsPassword="True"
+           Grid.Row="1"
+           Grid.Column="1"
+           />
+
+            <Button x:Name="btninicio"
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Iniciar seccion"
+            Clicked="btninicio_Clicked"/>
+            <Button x:Name="btbacercade"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="Acerca de"
+                    Clicked="btbacercade_Clicked"/>
+        </Grid>
+        
+       
+    </VerticalStackLayout>
+</ContentPage>
