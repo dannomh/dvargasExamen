@@ -31,7 +31,7 @@
                FontSize="18"
                Grid.Row="0"
                Grid.Column="0"/>
-            <DatePicker x:Name="Fechas" Date="01/01/2024"
+            <DatePicker x:Name="dpFechas" Date="01/01/2024"
                         Grid.Row="0"
                         Grid.Column="1"/>
 
@@ -40,7 +40,7 @@
                Grid.Row="1"
                Grid.Column="0"/>
             
-            <Picker x:Name="paises" Title="PAIS" Grid.Row="1" Grid.Column="1">
+            <Picker x:Name="dppaises" Title="PAIS" Grid.Row="1" Grid.Column="1">
                 <Picker.Items>
                     <x:String>
                         Ecuador
@@ -55,7 +55,7 @@
                    Grid.Row="2"
                    Grid.Column="0"/>
 
-            <Picker x:Name="ciudad" Title="CIUDAD" Grid.Row="2" Grid.Column="1">
+            <Picker x:Name="dpciudad" Title="CIUDAD" Grid.Row="2" Grid.Column="1">
                 <Picker.Items>
                     <x:String>
                         Quito
@@ -146,6 +146,11 @@
         Grid.Column="0"
         Text="Calcular Pago"
                     Clicked="btbacercade_Clicked"/>
+            <Button x:Name="btnResumen"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="Resumen"
+                    Clicked="btnResumen_Clicked"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
