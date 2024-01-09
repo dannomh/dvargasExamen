@@ -27,7 +27,10 @@ public partial class Registro : ContentPage
 
     private void btbacercade_Clicked(object sender, EventArgs e)
     {
-        double mensual = Convert.ToDouble(txtMonto.Text);
+        double inicial = Convert.ToDouble(txtMonto.Text);
+
+        double montofinalmensual = (1500 - inicial/4)+(0,4*500);
+        txtPagoInicial.Text = montofinalmensual.ToString();
         
     }
 }
