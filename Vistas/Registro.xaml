@@ -76,17 +76,76 @@
                    Grid.Row="3"
                    Grid.Column="1"
                    TextChanged="txtMonto_TextChanged"/>
-            <Label Text="Pago Inicial"
+            <Label Text="Pago Mensual"
                FontSize="18"
                Grid.Row="4"
                Grid.Column="0"/>
 
             <Entry x:Name="txtPagoInicial"
-                 Placeholder="PagoInicial"
+                 IsEnabled="False"
                  Keyboard="Numeric"
                  MaxLength="4"
-               Grid.Row="4"
-               Grid.Column="1"/>
+                 Grid.Row="4"
+                 Grid.Column="1"/>
+        </Grid>
+
+        <Grid Padding="40">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Nombre"
+               FontSize="18"
+               Grid.Row="0"
+               Grid.Column="0"/>
+            <Label Text="Apellido"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label Text="Edad"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="2"/>
+            
+            <Entry x:Name="txtNombre"
+                 Placeholder="Nombre"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+            <Entry x:Name="txtApellido"
+                Placeholder="Apellido"
+                 
+                 Grid.Row="1"
+                 Grid.Column="1"/>
+            <Entry x:Name="txtEdad"
+                Placeholder="Edad"
+                 Keyboard="Numeric"
+                 
+                 Grid.Row="1"
+                 Grid.Column="2"/>
+        </Grid>
+
+        <Grid Padding="40">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+               
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btbacercade"
+        Grid.Row="0"
+        Grid.Column="0"
+        Text="Calcular Pago"
+                    Clicked="btbacercade_Clicked"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
