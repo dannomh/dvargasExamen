@@ -10,6 +10,6 @@ public partial class Registro : ContentPage
 
     private void txtMonto_TextChanged(object sender, TextChangedEventArgs e)
     {
-
+        //
     }
 }
